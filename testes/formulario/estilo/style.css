@@ -83,6 +83,7 @@ section#formulario input[type=submit] {
     font-weight: bold;
     margin-top: 10px;
     padding: 10px;
+    border: none;
     cursor: pointer;
 }
 
