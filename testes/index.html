@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testes</title>
+    <link rel="stylesheet" href="estilo/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+</head>
+<body>
+    <section id="formulario">
+        <h1>Cadastro</h1>
+        <form action="cadastro.php" method="post">
+            <p>
+                <label for="inome">Nome: </label>
+                <span class="material-symbols-outlined">person</span>
+                <input type="text" name="nome" id="inome" required placeholder="Digite seu nome">
+            </p>
+            <p>
+                <label for="iidade">Idade: </label>
+                <span class="material-symbols-outlined">cake</span>
+                <input type="number" name="idade" id="iidade" required placeholder="Digite sua idade">
+            </p>
+            <p>
+                <input type="radio" name="sexo" id="imasc" checked>
+                <label for="imasc">Masculino </label>
+                <span class="material-symbols-outlined">male</span>
+                <input type="radio" name="sexo" id="ifem">
+                <label for="ifem">Feminino</label>
+                <span class="material-symbols-outlined">female</span>
+            </p>
+            <p>
+                <label for="iemail">E-mail: </label>
+                <span class="material-symbols-outlined">email</span>
+                <input type="email" name="email" id="iemail" required placeholder="Digite seu e-mail">
+            </p>
+            <p>
+                <label for="isenha">Senha: </label>
+                <span class="material-symbols-outlined">lock</span>
+                <input type="password" name="senha" id="isenha" required placeholder="Digite sua senha">
+            </p>
+            <p>
+                <label for="iconfirm">Confirme sua senha: </label>
+                <span class="material-symbols-outlined">lock</span>
+                <input type="password" name="confirm" id="iconfirm" required placeholder="Confirme sua senha">
+            </p>
+            <input type="submit" value="Cadastrar" id="botao" onclick="cadastro()">
+            <input type="button" value="Apagar" onclick="apagar()">
+        </form>
+    </section>
+
+    <script src="script/script.js"></script>
+</body>
+</html>
