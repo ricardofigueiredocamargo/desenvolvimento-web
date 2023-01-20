@@ -63,6 +63,7 @@ div h1, p {
 .imagem {
     background-color: #D4D3BE;
     margin-bottom: 10px;
+    padding-bottom: 6px;
     border-radius: 5px;
 }
 
