@@ -40,6 +40,10 @@ header menu {
     font-size: 0.9em;
 }
 
+header menu > ul {
+    list-style-type: none;
+}
+
 header menu > ul > li {
     background-color: #d0cfbc;
     text-align: center;
