@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 590px) {
+    header nav {
+        padding: 15px;
+    }
+
+    header nav > a {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    section {
+        width: 700px;
+    }
+}
