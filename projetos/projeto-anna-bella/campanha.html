@@ -7,17 +7,21 @@
     <title>Campanhas publicitárias</title>
     <link rel="stylesheet" href="estilo/geral.css">
     <link rel="stylesheet" href="esitlo/media-query.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <section>
         <header>
             <img src="imagens/capa.png" alt="anna bella">
-            <nav>
-                <a href="index.html" id="sem-borda">HOME</a>
-                <a href="bio.html">BIOGRAFIA</a>
-                <a href="campanha.html">CAMPANHAS PUBLICITÁRIAS</a>
-                <a href="contato.html">CONTATO</a>
-            </nav>
+            <span class="material-symbols-outlined" id="burguer" onclick="clickMenu()">menu</span>
+            <menu id="itens">
+                <ul>
+                    <li><a href="index.html" id="sem-borda">HOME</a></li>
+                    <li><a href="bio.html">BIOGRAFIA</a></li>
+                    <li><a href="campanha.html">CAMPANHAS PUBLICITÁRIAS</a></li>
+                    <li><a href="contato.html">CONTATO</a></li>
+                </ul>
+            </menu>
         <header>
         <div>
             <h1>Campanhas publicitárias</h1>
@@ -37,5 +41,7 @@
         <div>
     </section>
     <footer>Todos os direitos reservados</footer>
+
+    <script src="script/script.js"></script>
 </body>
 </html>
