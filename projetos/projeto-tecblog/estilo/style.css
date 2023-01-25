@@ -157,6 +157,10 @@ main div.lateral-direita > div.bloco > p, a, hr {
     margin-bottom: 5px;
 }
 
+main div.lateral-direita > div.bloco > a {
+    width: 100px;
+}
+
 main div.lateral-direita > div.bloco > a:hover {
     text-decoration: underline;
     transition-duration: 0.4s;
