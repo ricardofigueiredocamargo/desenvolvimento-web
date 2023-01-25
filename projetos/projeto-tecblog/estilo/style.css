@@ -109,6 +109,7 @@ main div.postagem > img {
 
 main a {
     color: #FFC300;
+    width: 100px;
     text-decoration: none;
     margin-bottom: 5px;
 }
@@ -155,10 +156,6 @@ main div.lateral-direita > div.bloco > p, a, hr {
     display: block;
     font-size: 0.9em;
     margin-bottom: 5px;
-}
-
-main div.lateral-direita > div.bloco > a {
-    width: 100px;
 }
 
 main div.lateral-direita > div.bloco > a:hover {
