@@ -1,0 +1,179 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    position: relative;
+    background-color: #FCF8FC;
+    width: 100vw;
+    height: 100vh;
+}
+
+/*
+    amarelo: #FFC300;
+    cinza (fundo): #DEDADE;
+    cinza (letras): #4D4950;
+*/
+
+/*================================= HEADER =================================*/
+
+header {
+    background-color: #FFC300;
+    color: white;
+    text-align: center;
+}
+
+header h1 {
+    padding: 15px;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header span#burguer {
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+header span#burguer:hover {
+    background-color: white;
+    color: #FFC300;
+    transition-duration: 0.4s;
+}
+
+header menu {
+    display: none;
+}
+
+header ul > li {
+    margin-bottom: 5px;
+    list-style-type: none;
+}
+
+header ul > li > a {
+    display: block;
+    color: white;
+    width: 90%;
+    font-weight: bold;
+    font-size: 1em;
+    text-decoration: none;
+    padding: 5px;
+    margin: auto;
+    border-radius: 5px;
+}
+
+header ul > li > a:hover {
+    background-color: white;
+    color: #FFC300;
+    transition-duration: 0.4s;
+}
+
+/*================================= POSTAGENS =================================*/
+
+main {
+    position: relative;
+    width: 95%;
+    margin: auto;
+}
+
+main div.postagem {
+    background-color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.132);
+    transition: width 0.4s;
+    transition-timing-function: ease;
+}
+
+main div.postagem > h2 {
+    color: #FFC300;
+    font-size: 2em;
+}
+
+main div.postagem > p {
+    margin-bottom: 10px;
+}
+
+main div.postagem > img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+main a {
+    color: #FFC300;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+main div.postagem > a:hover {
+    text-decoration: underline;
+    transition-duration: 0.4s;
+}
+
+main div.clear {
+    clear: both;
+}
+
+/*================================= BLOCOS AO LADO  =================================*/
+
+main div.lateral-direita {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+main div.lateral-direita > div.bloco {
+    background-color: white;
+    padding: 10px;
+    margin-top: 10px;
+    width: 210px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.132);
+    transition: width 0.4s;
+    transition-timing-function: ease;
+}
+
+main div.lateral-direita > div.bloco > h2 {
+    background-color: #DEDADE;
+    color: #4D4950;
+    font-size: 1.2em;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+main div.lateral-direita > div.bloco > p, a, hr {
+    display: block;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+main div.lateral-direita > div.bloco > a:hover {
+    text-decoration: underline;
+    transition-duration: 0.4s;
+}
+
+/*================================= FOOTER =================================*/
+
+footer {
+    background-color: #DEDADE;
+    width: 90%;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.cor-cinza {
+    color: #4D4950;
+}

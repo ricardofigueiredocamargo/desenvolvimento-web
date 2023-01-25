@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 768px) {
+    header span#burguer {
+        display: none;
+    }
+
+    header menu#itens {
+        display: block;
+    }
+
+    header ul > li {
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+    
+    header ul > li > a {
+        display: inline;
+        color: white;
+        text-decoration: none;
+        padding: 5px 10px;
+    }
+    
+    header ul > li > a:hover {
+        background-color: white;
+        color: #FFC300;
+        transition-duration: 0.4s;
+    }
+
+    main {
+        width: 760px;
+    }
+
+    main div.postagem {
+        float: left;
+        width: 500px;
+    }
+
+    main div.lateral-direita {
+        display: block;
+    }
+
+    footer {
+        width: 760px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    main {
+        width: 950px;
+    }
+
+    main div.postagem {
+        float: left;
+        width: 600px;
+    }
+
+    main div.lateral-direita > div.bloco {
+        width: 300px;
+    }
+
+    main div.lateral-direita > div.bloco > h2 {
+        font-size: 1.7em;
+    }
+
+    main div.lateral-direita > div.bloco > p, a, hr {
+        font-size: 1em;
+    }
+
+    footer {
+        width: 950px;
+    }
+}
