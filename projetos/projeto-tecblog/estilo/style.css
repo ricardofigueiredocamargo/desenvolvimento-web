@@ -25,6 +25,7 @@ header {
     background-color: #FFC300;
     color: white;
     text-align: center;
+    padding-bottom: 3px;
 }
 
 header h1 {
