@@ -6,24 +6,27 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+:root {
+    --cor-branca-body: #FCF8FC;
+    --cor-branca-text: #ffffff;
+    --cor-branca-div: #ffffff;
+    --cor-amarelo: #FFC300;
+    --cor-cinza-fundo: #DEDADE;
+    --cor-cinza-texto: #4D4950;
+}
+
 body {
     position: relative;
-    background-color: #FCF8FC;
+    background-color: var(--cor-branca-body);
     width: 100vw;
     height: 100vh;
 }
 
-/*
-    amarelo: #FFC300;
-    cinza (fundo): #DEDADE;
-    cinza (letras): #4D4950;
-*/
-
 /*================================= HEADER =================================*/
 
 header {
-    background-color: #FFC300;
-    color: white;
+    background-color: var(--cor-amarelo);
+    color: var(--cor-branca-text);
     text-align: center;
     padding-bottom: 3px;
 }
@@ -34,6 +37,10 @@ header h1 {
     margin-bottom: 10px;
 }
 
+.cor-cinza {
+    color: var(--cor-cinza-texto);
+}
+
 header span#burguer {
     padding: 5px;
     margin-bottom: 10px;
@@ -42,8 +49,8 @@ header span#burguer {
 }
 
 header span#burguer:hover {
-    background-color: white;
-    color: #FFC300;
+    background-color: var(--cor-branca-text);
+    color: var(--cor-amarelo);
     transition-duration: 0.4s;
 }
 
@@ -58,7 +65,7 @@ header ul > li {
 
 header ul > li > a {
     display: block;
-    color: white;
+    color: var(--cor-branca-text);
     width: 90%;
     font-weight: bold;
     font-size: 1em;
@@ -69,8 +76,8 @@ header ul > li > a {
 }
 
 header ul > li > a:hover {
-    background-color: white;
-    color: #FFC300;
+    background-color: var(--cor-branca-text);
+    color: var(--cor-amarelo);
     transition-duration: 0.4s;
 }
 
@@ -83,7 +90,7 @@ main {
 }
 
 main div.postagem {
-    background-color: white;
+    background-color: var(--cor-branca-div);
     padding: 10px;
     margin-top: 10px;
     border-radius: 10px;
@@ -93,7 +100,7 @@ main div.postagem {
 }
 
 main div.postagem > h2 {
-    color: #FFC300;
+    color: var(--cor-amarelo);
     font-size: 2em;
 }
 
@@ -108,7 +115,7 @@ main div.postagem > img {
 }
 
 main a {
-    color: #FFC300;
+    color: var(--cor-amarelo);
     width: 100px;
     text-decoration: none;
     margin-bottom: 5px;
@@ -133,7 +140,7 @@ main div.lateral-direita {
 }
 
 main div.lateral-direita > div.bloco {
-    background-color: white;
+    background-color: var(--cor-branca-div);
     padding: 10px;
     margin-top: 10px;
     width: 210px;
@@ -144,8 +151,8 @@ main div.lateral-direita > div.bloco {
 }
 
 main div.lateral-direita > div.bloco > h2 {
-    background-color: #DEDADE;
-    color: #4D4950;
+    background-color: var(--cor-cinza-fundo);
+    color: var(--cor-cinza-texto);
     font-size: 1.2em;
     padding: 5px;
     border-radius: 5px;
@@ -166,7 +173,7 @@ main div.lateral-direita > div.bloco > a:hover {
 /*================================= FOOTER =================================*/
 
 footer {
-    background-color: #DEDADE;
+    background-color: var(--cor-cinza-fundo);
     width: 90%;
     font-weight: bold;
     text-align: center;
@@ -174,8 +181,4 @@ footer {
     margin: auto;
     margin-top: 20px;
     border-radius: 10px;
-}
-
-.cor-cinza {
-    color: #4D4950;
 }

@@ -16,16 +16,8 @@
     
     header ul > li > a {
         display: inline;
-        color: white;
-        text-decoration: none;
         padding: 5px 10px;
-    }
-    
-    header ul > li > a:hover {
-        background-color: white;
-        color: #FFC300;
-        transition-duration: 0.4s;
-    }
+    }    
 
     main {
         width: 760px;
