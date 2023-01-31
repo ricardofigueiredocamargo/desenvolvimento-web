@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="estilo/style.css">
+</head>
+<body>
+    <section>
+        <div id="imagem">
+            <img src="imagens/perfil.png" alt="imagem de perfil">
+        </div>
+        <form action="cadastro.php" method="post">
+            <div>
+                <input type="email" name="email" id="iemail" required placeholder="Digite seu e-mail">
+                <label for="iemail">E-mail</label>
+            </div>
+            <div>
+                <input type="password" name="senha" id="isenha" required placeholder="Digite sua senha">
+                <label for="isenha">Senha</label>
+            </div>
+            <input type="submit" value="Logar">
+        </form>
+    </section>
+</body>
+</html>
