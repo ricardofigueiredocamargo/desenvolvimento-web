@@ -160,7 +160,7 @@ section#container div.bloco-lista-noticia {
 section#container div.bloco-lista-noticia > div.conteudo > div.noticia > img {
     float: left;
     width: 30%;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 section#container div.bloco-lista-noticia > div.conteudo > div.noticia > a.resumo {
@@ -168,7 +168,7 @@ section#container div.bloco-lista-noticia > div.conteudo > div.noticia > a.resum
     color: black;
     width: 65%;
     text-decoration: none;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 section#container div.bloco-lista-noticia > div.conteudo > div.noticia > a.resumo > h4 {

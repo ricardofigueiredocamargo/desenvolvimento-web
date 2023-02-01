@@ -19,6 +19,7 @@
         clear: left;
         position: relative;
         padding: 0;
+        padding-right: 5px;
         margin: 0;
         margin-top: 20px;
     }
@@ -31,6 +32,7 @@
     header div menu ul li a {
         display: inline-block;
         margin: 0;
+        margin-right: -5px;
         padding: 10px 10px;
         border-radius: 0;
     }
@@ -45,7 +47,7 @@
 
     div#principal section#container {
         float: right;
-        width: 550px;
+        width: 540px;
         font-size: 0.8em;
     }
 
@@ -61,7 +63,7 @@
 
     div#principal section#navegacao {
         float: left;
-        width: 180px;
+        width: 190px;
     }
 
     div#principal section#navegacao > div {
