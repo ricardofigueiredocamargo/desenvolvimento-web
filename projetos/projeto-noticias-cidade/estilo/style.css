@@ -160,6 +160,7 @@ section#container div.bloco-lista-noticia {
 section#container div.bloco-lista-noticia > div.conteudo > div.noticia > img {
     float: left;
     width: 30%;
+    margin-top: 10px;
 }
 
 section#container div.bloco-lista-noticia > div.conteudo > div.noticia > a.resumo {
@@ -181,7 +182,7 @@ section#container div.bloco-lista-noticia > div.conteudo > hr {
     margin-bottom: 10px;
 }
 
-/*===================================== NAVEGAÇÃO ENTREVISTAS =========================================*/
+/*===================================== NAVEGAÇÃO ENTREVISTAS =======================================*/
 
 section#navegacao div.bloco-entrevista > div.conteudo > ul {
     list-style-type: none;
