@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 768px) {
+    header > div, div#principal, footer > div {
+        max-width: 750px;
+    }
+
+    header div img {
+        float: left;
+        padding-left: 0;
+    }
+
+    header i#burguer {
+        display: none;
+    }
+
+    header div menu {
+        display: block;
+        clear: left;
+        position: relative;
+        padding: 0;
+        margin: 0;
+        margin-top: 20px;
+    }
+
+    header div menu ul li {
+        display: inline-block;
+        background: url(../imagens/divisor.png) left center repeat-y;
+    }
+
+    header div menu ul li a {
+        display: inline-block;
+        margin: 0;
+        padding: 10px 10px;
+        border-radius: 0;
+    }
+
+    div#principal {
+        margin: auto;
+    }
+
+    div#principal h2 {
+        font-size: 1.1em;
+    }
+
+    div#principal section#container {
+        float: right;
+        width: 550px;
+        font-size: 0.8em;
+    }
+
+    div#principal section#container > div.bloco-left {
+        float: left;
+        width: 47%;
+    }
+
+    div#principal section#container > div.bloco-right {
+        float: right;
+        width: 45%;
+    }
+
+    div#principal section#navegacao {
+        float: left;
+        width: 180px;
+    }
+
+    div#principal section#navegacao > div {
+        width: 95%;
+        float: left;
+    }
+
+    section#container div.bloco-lista-noticia > div.conteudo > div.noticia > a.resumo {
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    header > div, div#principal, footer > div {
+        max-width: 950px;
+    }
+
+    div#principal h2 {
+        font-size: 1.2em;
+    }
+
+    div#principal section#container {
+        width: 650px;
+        font-size: 0.9em;
+    }
+
+    div#principal section#navegacao {
+        float: left;
+        width: 280px;
+    }
+}

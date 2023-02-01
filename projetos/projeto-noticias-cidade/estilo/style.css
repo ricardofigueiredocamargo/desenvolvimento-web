@@ -1,0 +1,243 @@
+@charset "UTF-8";
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --cor-branca: #ffffff;
+    --cor-vermelho-menu: #B20032;
+    --cor-vermelho-menu-selecionado: #E10039;
+    --cor-azul-fundo: #294C71;
+}
+
+body {
+    background-color: var(--cor-branca);
+    width: 100vw;
+    height: 100vh;
+}
+
+/*========================================== HEADER ===============================================*/
+
+header {
+    background: var(--cor-azul-fundo) url(../imagens/fundo.png) center bottom repeat-x;
+    height: 240px;
+    margin-bottom: 10px;
+}
+
+header div {
+    position: relative;
+    background: url(../imagens/detalhe-topo.png) right center no-repeat;
+    width: 95%;
+    height: 80%;
+    margin: auto;
+}
+
+header div img {
+    padding: 10px;
+}
+
+/*======= MENU HAMBURGUER =======*/
+header div #burguer {
+    display: block;
+    background-color: var(--cor-vermelho-menu);
+    color: var(--cor-branca);
+    width: 41px;
+    font-size: 2.5em;
+    margin-top: 10px;
+    margin-left: 65px;
+    border: 1px solid rgb(208, 2, 2);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+header div menu {
+    display: none;
+    position: absolute;
+    float: left;
+    background-color: var(--cor-vermelho-menu);
+    min-width: 160px;
+    text-align: center;
+    padding: 5px;
+    margin-left: 115px;
+    margin-top: -42px;
+    border: 2px solid rgb(208, 2, 2);
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+header div menu ul {
+    list-style-type: none;
+}
+
+header div menu ul li a {
+    display: block;
+    color: var(--cor-branca);
+    text-decoration: none;
+    padding: 10px 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.selecionado a {
+    background-color: var(--cor-vermelho-menu-selecionado);
+}
+
+.primeiro a {
+    background-image: none;
+}
+
+header div menu ul li a:hover {
+    background-color: var(--cor-vermelho-menu-selecionado);
+    transition-duration: 0.4s;
+}
+
+/*====================================== CONTEUDOS DESTAQUES =========================================*/
+
+/*========= CONFIGURAÇÃO GERAL ==========*/
+section div.bloco-noticia, div.bloco-lista-noticia, div.bloco-entrevista, div.bloco-email {
+    background: url(../imagens/fundo-caixa.png);
+    width: 95%;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+section div > h1 {
+    background-color: var(--cor-azul-fundo);
+    color: var(--cor-branca);
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+section div > div.conteudo {
+    background-color: var(--cor-branca);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/*=========== CONFIGURAÇÃO ESPECÍFICA============*/
+section#container div.bloco-noticia > div.conteudo > h2 {
+    display: inline;
+    background-color: var(--cor-vermelho-menu);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+section#container div.bloco-noticia > div.conteudo > img {
+    width: 100%;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+section#container div.bloco-noticia > div.conteudo > p {
+    font-size: 1.1em;
+    margin: 5px 0;
+}
+
+section#container div.bloco-noticia > div.conteudo > a {
+    color: var(--cor-vermelho-menu);
+    font-weight: bold;
+}
+
+/*====================================== CONTEUDOS EM LISTA =========================================*/
+
+section#container div.bloco-lista-noticia {
+    margin-bottom: 10px;
+}
+
+section#container div.bloco-lista-noticia > div.conteudo > div.noticia > img {
+    float: left;
+    width: 30%;
+}
+
+section#container div.bloco-lista-noticia > div.conteudo > div.noticia > a.resumo {
+    float: right;
+    color: black;
+    width: 65%;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+section#container div.bloco-lista-noticia > div.conteudo > div.noticia > a.resumo > h4 {
+    color: var(--cor-azul-fundo);
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+section#container div.bloco-lista-noticia > div.conteudo > hr {
+    clear: both;
+    margin-bottom: 10px;
+}
+
+/*===================================== NAVEGAÇÃO ENTREVISTAS =========================================*/
+
+section#navegacao div.bloco-entrevista {
+    float: left;
+    width: 45%;
+}
+
+section#navegacao div.bloco-entrevista > div.conteudo > ul {
+    list-style-type: none;
+}
+
+section#navegacao div.bloco-entrevista > div.conteudo > ul > li > a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+section#navegacao div.bloco-entrevista > div.conteudo > ul > li > a:hover {
+    background: url(../imagens/marcador.png) left center no-repeat;
+    text-indent: 20px;
+    transition-duration: 0.4s;
+}
+
+/*===================================== NAVEGAÇÃO EMAIL =========================================*/
+
+section#navegacao div.bloco-email {
+    float: right;
+    width: 45%;
+}
+
+section#navegacao div.bloco-email > div.conteudo > form > input[type=email] {
+    width: 95%;
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.425);
+    border-radius: 5px;
+}
+
+section#navegacao div.bloco-email > div.conteudo > form > input[type=submit] {
+    background-color: var(--cor-vermelho-menu);
+    color: var(--cor-branca);
+    font-weight: bold;
+    padding: 5px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+section#navegacao div.bloco-email > div.conteudo > form > input[type=submit]:hover {
+    background-color: var(--cor-vermelho-menu-selecionado);
+    transition-duration: 0.4s;
+}
+
+/*===================================== RODAPÉ =========================================*/
+
+footer {
+    clear: both;
+    background-color: var(--cor-azul-fundo);
+    color: var(--cor-branca);
+    padding: 20px;
+}
+
+footer div {
+    margin: auto;
+}

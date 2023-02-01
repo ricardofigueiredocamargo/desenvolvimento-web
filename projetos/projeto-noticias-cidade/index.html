@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias Cidade</title>
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="stylesheet" href="estilo/style.css">
+    <link rel="stylesheet" href="estilo/media-query.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,200" />
+</head>
+<body onresize="mudouTamanho()">
+    <header>
+        <div>
+            <img src="imagens/logo.png" alt="Logo Notícias Cidade">
+            <i id="burguer" class="material-symbols-outlined" onclick="mostrarMenu()">menu</i>
+            <menu id="itens">
+                <ul>
+                    <li class="selecionado primeiro"><a href="index.html">Home</a></li>
+                    <li><a href="#">Brasil</a></li>
+                    <li><a href="#">Internacional</a></li>
+                    <li><a href="#">Economia</a></li>
+                    <li><a href="#">Saúde</a></li>
+                    <li><a href="#">Ciência</a></li>
+                    <li><a href="#">Fotos</a></li>
+                </ul>
+            </menu>
+        </div>
+    </header>
+    <div id="principal">
+        <section id="container">
+            <div class="bloco-noticia bloco-left"> <!--bloco de noticia ENTREVISTA-->
+                <h1>Última entrevista</h1>
+                <div class="conteudo">
+                    <h2>ENTREVISTA COM FELIPE SILVA</h2>
+                    <img src="imagens/doutor.jpg" alt="Doutor Felipe Silva">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    <a href="#">Leia mais!</a>
+                </div>
+            </div>
+            <div class="bloco-noticia bloco-right"> <!--bloco de noticia DESTAQUE-->
+                <h1>Destaque</h1>
+                <div class="conteudo">
+                    <h2>NOVA LEGISLAÇÃO</h2>
+                    <img src="imagens/taxi.jpg" alt="taxi">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    <a href="#">Leia mais!</a>
+                </div>
+            </div>
+            <div class="bloco-lista-noticia bloco-left"> <!--lista de noticias MUNDO-->
+                <h1>Mundo</h1>
+                <div class="conteudo">
+                    <div class="noticia"> <!--noticia 1-->
+                        <img src="imagens/mundo.jpg" alt="cidade">
+                        <a href="#" class="resumo">
+                            <h4>CRISE EUROPÉIA</h4>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </a>
+                    </div>
+                    <hr>
+                    <div class="noticia"> <!--noticia 2-->
+                        <img src="imagens/mundo.jpg" alt="cidade">
+                        <a href="#" class="resumo">
+                            <h4>USA TENTAM NOVO ACORDO</h4>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </a>
+                    </div>
+                    <hr>
+                    <div class="noticia"> <!--noticia 3-->
+                        <img src="imagens/mundo.jpg" alt="cidade">
+                        <a href="#" class="resumo">
+                            <h4>GUERRA NA SÍRIA</h4>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </a>
+                    </div>
+                    <hr>
+                    <div class="noticia"> <!--noticia 4-->
+                        <img src="imagens/mundo.jpg" alt="cidade">
+                        <a href="#" class="resumo">
+                            <h4>RÚSSIA APROVA LEI...</h4>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </a>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="bloco-lista-noticia bloco-right"> <!--lista de noticias RECENTES-->
+                <h1>Notícias recentes</h1>
+                <div class="conteudo">
+                    <div class="noticia"> <!--noticia 1-->
+                        <img src="imagens/tecnologia.jpg" alt="tecnologia">
+                        <a href="#" class="resumo">
+                            <h4>NOVAS TECNOLOGIAS!</h4>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </a>
+                    </div>
+                    <hr>
+                    <div class="noticia"> <!--noticia 2-->
+                        <img src="imagens/cidade.jpg" alt="cidade">
+                        <a href="#" class="resumo">
+                            <h4>PARLAMENTO APROVA...</h4>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </a>
+                    </div>
+                    <hr>
+                    <div class="noticia"> <!--noticia 3-->
+                        <img src="imagens/taxi.jpg" alt="taxi">
+                        <a href="#" class="resumo">
+                            <h4>TAXISTAS NA CIDADE!</h4>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </a>
+                    </div>
+                    <hr>
+                    <div class="noticia"> <!--noticia 4-->
+                        <img src="imagens/doutor.jpg" alt="doutor">
+                        <a href="#" class="resumo">
+                            <h4>COMISSÃO APROVA...</h4>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </a>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </section>
+        <section id="navegacao">
+            <div class="bloco-entrevista"> <!--inicio do bloco com lista de nomes-->
+                <h1>Entrevistas</h1>
+                <div class="conteudo">
+                    <ul>
+                        <li><a href="#">José Almeida</a></li>
+                        <li><a href="#">Felipe Silva</a></li>
+                        <li><a href="#">Renato Rodrigues</a></li>
+                        <li><a href="#">Abelardo Silveira</a></li>
+                        <li><a href="#">André Carlos</a></li>
+                        <li><a href="#">Márcio Mello</a></li>
+                        <li><a href="#">João Pedro</a></li>
+                        <li><a href="#">Fernando Weiss</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bloco-email"> <!--inicio do bloco de cadastro-->
+                <h1>News</h1>
+                <div class="conteudo">
+                    <form action="cadastro.php" method="post">
+                        <label for="iemail">E-mail: </label><br>
+                        <input type="email" name="email" id="iemail" required placeholder="E-mail">
+                        <input type="submit" value="Cadastrar">
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div>
+            &copy; Copyright 2000-2018 Notícias cidade
+        </div>
+    </footer>
+
+    <script src="script/script.js"></script>
+</body>
+</html>
