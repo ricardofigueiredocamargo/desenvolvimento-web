@@ -39,7 +39,7 @@
         margin: auto;
     }
 
-    div#principal h2 {
+    div#principal section#container div.bloco-noticia h2 {
         font-size: 1.1em;
     }
 
@@ -79,7 +79,7 @@
         max-width: 950px;
     }
 
-    div#principal h2 {
+    div#principal section#container div.bloco-noticia h2 {
         font-size: 1.2em;
     }
 
