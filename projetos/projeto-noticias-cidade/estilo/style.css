@@ -31,6 +31,7 @@ header div {
     position: relative;
     background: url(../imagens/detalhe-topo.png) right center no-repeat;
     width: 95%;
+    max-width: 600px;
     height: 80%;
     margin: auto;
 }
@@ -97,6 +98,11 @@ header div menu ul li a:hover {
 /*====================================== CONTEUDOS DESTAQUES =========================================*/
 
 /*========= CONFIGURAÇÃO GERAL ==========*/
+div#principal {
+    max-width: 600px;
+    margin: auto;
+}
+
 section div.bloco-noticia, div.bloco-lista-noticia, div.bloco-entrevista, div.bloco-email {
     background: url(../imagens/fundo-caixa.png);
     width: 95%;
@@ -124,6 +130,7 @@ section div > div.conteudo {
 section#container div.bloco-noticia > div.conteudo > h2 {
     display: inline;
     background-color: var(--cor-vermelho-menu);
+    font-size: 1.3em;
     padding: 5px;
     border-radius: 5px;
 }
@@ -178,7 +185,7 @@ section#container div.bloco-lista-noticia > div.conteudo > hr {
 
 section#navegacao div.bloco-entrevista {
     float: left;
-    width: 45%;
+    width: 43%;
 }
 
 section#navegacao div.bloco-entrevista > div.conteudo > ul {
@@ -203,7 +210,7 @@ section#navegacao div.bloco-entrevista > div.conteudo > ul > li > a:hover {
 
 section#navegacao div.bloco-email {
     float: right;
-    width: 45%;
+    width: 43%;
 }
 
 section#navegacao div.bloco-email > div.conteudo > form > input[type=email] {
