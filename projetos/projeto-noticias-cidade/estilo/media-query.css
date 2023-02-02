@@ -19,12 +19,16 @@
         clear: left;
         position: relative;
         padding: 0;
-        padding-right: 5px;
         margin: 0;
         margin-top: 20px;
     }
 
+    header div menu ul {
+        float: left;
+    }
+
     header div menu ul li {
+        float: left;
         display: inline-block;
         background: url(../imagens/divisor.png) left center repeat-y;
     }
@@ -32,8 +36,7 @@
     header div menu ul li a {
         display: inline-block;
         margin: 0;
-        margin-right: -5px;
-        padding: 10px 10px;
+        padding: 10px 15px;
         border-radius: 0;
     }
 
@@ -41,24 +44,24 @@
         margin: auto;
     }
 
-    div#principal section#container div.bloco-noticia h2 {
+    div#principal section#destaque div.bloco-noticia h2 {
         font-size: 1.1em;
     }
 
-    div#principal section#container {
+    div#principal section#destaque {
         float: right;
         width: 540px;
         font-size: 0.8em;
     }
 
-    div#principal section#container > div.bloco-left {
+    div#principal section#destaque > div.bloco-left {
         float: left;
         width: 47%;
     }
 
-    div#principal section#container > div.bloco-right {
+    div#principal section#destaque > div.bloco-right {
         float: right;
-        width: 45%;
+        width: 44%;
     }
 
     div#principal section#navegacao {
@@ -71,8 +74,12 @@
         float: left;
     }
 
-    section#container div.bloco-lista-noticia > div.conteudo > div.noticia > a.resumo {
+    section#destaque div.bloco-lista-noticia > div.conteudo > div.noticia > a.resumo {
         margin-bottom: 5px;
+    }
+
+    section#navegacao div.bloco-entrevista > div.conteudo > ul {
+        columns: 1;
     }
 }
 
@@ -81,17 +88,29 @@
         max-width: 950px;
     }
 
-    div#principal section#container div.bloco-noticia h2 {
+    header div menu ul li a {
+        padding: 10px 20px;
+    }
+
+    div#principal section#destaque div.bloco-noticia h2 {
         font-size: 1.2em;
     }
 
-    div#principal section#container {
-        width: 650px;
+    div#principal section#destaque {
+        width: 720px;
         font-size: 0.9em;
+    }
+
+    div#principal section#destaque > div.bloco-left {
+        width: 320px;
+    }
+
+    div#principal section#destaque > div.bloco-right {
+        width: 340px;
     }
 
     div#principal section#navegacao {
         float: left;
-        width: 280px;
+        width: 200px;
     }
 }

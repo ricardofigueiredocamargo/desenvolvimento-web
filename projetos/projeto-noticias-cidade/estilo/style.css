@@ -110,6 +110,7 @@ section div.bloco-noticia, div.bloco-lista-noticia, div.bloco-entrevista, div.bl
     margin: auto;
     margin-bottom: 10px;
     border-radius: 5px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 section div > h1 {
@@ -127,7 +128,7 @@ section div > div.conteudo {
 }
 
 /*=========== CONFIGURAÇÃO ESPECÍFICA============*/
-section#container div.bloco-noticia > div.conteudo > h2 {
+section#destaque div.bloco-noticia > div.conteudo > h2 {
     display: inline;
     background-color: var(--cor-vermelho-menu);
     font-size: 1.3em;
@@ -135,35 +136,35 @@ section#container div.bloco-noticia > div.conteudo > h2 {
     border-radius: 5px;
 }
 
-section#container div.bloco-noticia > div.conteudo > img {
+section#destaque div.bloco-noticia > div.conteudo > img {
     width: 100%;
     margin-top: 5px;
     border-radius: 5px;
 }
 
-section#container div.bloco-noticia > div.conteudo > p {
+section#destaque div.bloco-noticia > div.conteudo > p {
     font-size: 1.1em;
     margin: 5px 0;
 }
 
-section#container div.bloco-noticia > div.conteudo > a {
+section#destaque div.bloco-noticia > div.conteudo > a {
     color: var(--cor-vermelho-menu);
     font-weight: bold;
 }
 
 /*====================================== CONTEUDOS EM LISTA =========================================*/
 
-section#container div.bloco-lista-noticia {
+section#destaque div.bloco-lista-noticia {
     margin-bottom: 10px;
 }
 
-section#container div.bloco-lista-noticia > div.conteudo > div.noticia > img {
+section#destaque div.bloco-lista-noticia > div.conteudo > div.noticia > img {
     float: left;
     width: 30%;
     margin-top: 5px;
 }
 
-section#container div.bloco-lista-noticia > div.conteudo > div.noticia > a.resumo {
+section#destaque div.bloco-lista-noticia > div.conteudo > div.noticia > a.resumo {
     float: right;
     color: black;
     width: 65%;
@@ -171,13 +172,13 @@ section#container div.bloco-lista-noticia > div.conteudo > div.noticia > a.resum
     margin-top: 5px;
 }
 
-section#container div.bloco-lista-noticia > div.conteudo > div.noticia > a.resumo > h4 {
+section#destaque div.bloco-lista-noticia > div.conteudo > div.noticia > a.resumo > h4 {
     color: var(--cor-azul-fundo);
     font-weight: normal;
     margin-bottom: 5px;
 }
 
-section#container div.bloco-lista-noticia > div.conteudo > hr {
+section#destaque div.bloco-lista-noticia > div.conteudo > hr {
     clear: both;
     margin-bottom: 10px;
 }
@@ -186,6 +187,7 @@ section#container div.bloco-lista-noticia > div.conteudo > hr {
 
 section#navegacao div.bloco-entrevista > div.conteudo > ul {
     list-style-type: none;
+    columns: 2;
 }
 
 section#navegacao div.bloco-entrevista > div.conteudo > ul > li > a {
@@ -198,6 +200,7 @@ section#navegacao div.bloco-entrevista > div.conteudo > ul > li > a {
 
 section#navegacao div.bloco-entrevista > div.conteudo > ul > li > a:hover {
     background: url(../imagens/marcador.png) left center no-repeat;
+    color: rgb(137, 136, 136);
     text-indent: 15px;
     transition-duration: 0.4s;
 }
