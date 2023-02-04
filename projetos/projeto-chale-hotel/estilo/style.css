@@ -12,14 +12,13 @@
 }
 
 body {
-    background-color: #f2f2f2;
+    background: #f2f2f2 url(../imagens/bg.png);
     width: 100vw;
     height: 100vh;
 }
 
 div#container {
-    position: relative;
-    background: url(../imagens/topo-imagem-principal.png) left top no-repeat;
+    background: url(../imagens/bg-container.png) top center repeat-y;
     width: 95%;
     min-width: 800px;
     max-width: 1250px;
@@ -31,14 +30,16 @@ div#container {
 /*============================================ HEADER ========================================*/
 
 header {
+    position: relative;
+    background: url(../imagens/topo-imagem-principal.png) left no-repeat;
     width: 100%;
     height: 250px;
 }
 
 /*===== imagem logo chalé hotel ====*/
-header > img {
+header > a > img.logo {
     position: absolute;
-    top: 2%;
+    top: 3%;
     left: 1%;
 }
 
@@ -61,21 +62,22 @@ header div#menu div#menu-conteudo {
 
 header div#menu div#menu-conteudo p {
     font-size: 0.8em;
-    padding: 5px 0;
+    padding: 10px 0;
     border-top: 1px solid var(--cor-letra-menu);
     border-bottom: 1px solid var(--cor-letra-menu);
 }
 
-header div#menu div#menu-conteudo p input[type=button] {
+header div#menu div#menu-conteudo p a.reserva {
     background-color: var(--cor-letra-menu);
     color: var(--cor-branca);
+    text-decoration: none;
     padding: 5px;
-    margin-left: 75px;
+    margin-left: 78px;
     border: none;
     cursor: pointer;
 }
 
-header div#menu div#menu-conteudo p input[type=button]:hover {
+header div#menu div#menu-conteudo p a.reserva:hover {
     background-color: var(--cor-branca);
     color: var(--cor-letra-menu);
     transition-duration: 0.4s;
@@ -102,68 +104,40 @@ header div#menu div#menu-conteudo menu ul li a:hover {
     transition-duration: 0.4s;
 }
 
-header div#menu div#menu-conteudo img {
+header div#menu div#menu-conteudo img.depoimento {
     position: absolute;
     top: 25%;
     right: 10%;
 }
 
-/*============================================ DIV BG ========================================*/
-
-div#bg-principal {
+/*================================= CONTEUDO PRINCIPAL ==================================*/
+ #conteudo-principal {
     float: left;
     background: url(../imagens/bg-area-principal.png) top center repeat-x;
     width: 50%;
-    height: 48px;
+    padding: 20px 0;
 }
 
-div#bg-lateral {
-    float: right;
-    background: url(../imagens/bg-area-lateral.png) top center repeat-x;
-    width: 50%;
-    height: 48px;
-}
-
-/*======================================= SECTION CONTEUDO ===================================*/
-
-section#conteudo {
-    clear: both;
-    background: url(../imagens/bg-container.png) center center repeat-y;
-    width: 100%;
-    height: 400px;
-}
-
-@media screen and (max-width: 1040px) {
-    section#conteudo {
-        height: 500px;
-    }
-}
-
-/*========= conteudo principal ==========*/
-section#conteudo #conteudo-principal {
-    float: left;
-    width: 50%;
-    margin-top: -20px;
-}
-
-section#conteudo #conteudo-principal h1 {
+ #conteudo-principal h1 {
     color: var(--cor-letra-menu);
+    font-size: 1.5em;
     margin: 0px 15px 10px 15px;
 }
 
-section#conteudo #conteudo-principal p {
+ #conteudo-principal p {
     text-align: justify;
     margin: 0px 15px 10px 15px;
 }
 
-/*========= conteudo lateral ==========*/
-section#conteudo #conteudo-lateral {
+/*================================= CONTEUDO LATERAL ==================================*/
+ #conteudo-lateral {
     float: right;
+    background: url(../imagens/bg-area-lateral.png) top center repeat-x;
     width: 50%;
-    margin-top: -20px;
+    padding: 20px 0;
 }
 
-section#conteudo #conteudo-lateral a {
+ #conteudo-lateral a {
     float: left;
     display: block;
     color: black;
@@ -174,29 +148,31 @@ section#conteudo #conteudo-lateral a {
     border-bottom: 1px solid white;
 }
 
-section#conteudo #conteudo-lateral a:hover {
+ #conteudo-lateral a:hover {
     background-color: rgba(255, 255, 255, 0.305);
     transition-duration: 0.4s;
 }
 
-section#conteudo #conteudo-lateral a img {
+ #conteudo-lateral a img {
     float: left;
     width: 30%;
 }
 
-section#conteudo #conteudo-lateral a .descricao {
+ #conteudo-lateral a .descricao {
     float: left;
     width: 60%;
     margin-left: 10px;
 }
 
-section#conteudo #conteudo-lateral a .descricao h4 {
+ #conteudo-lateral a .descricao h4 {
+    background: url(../imagens/ornamento.png) right center no-repeat;
     color: var(--cor-letra-menu);
 }
 
-/*======================================= FOOTER ===================================*/
+/*======================================= RODAPÉ ===================================*/
 #rodape {
-    background: url(../imagens/bg-rodape.png) top center repeat-x;
+    clear: both;
+    background: #ffffff url(../imagens/bg-rodape.png) top center repeat-x;
     width: 100%;
 }
 
