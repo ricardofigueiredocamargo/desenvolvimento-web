@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-#conteudo {
+#conteudoaaa {
     display: flex;
     background-color: #dcdcdc;
     height: 400px;
@@ -45,7 +45,7 @@
 }
 */
 
-.item {
+.itemaaa {
     background-color: white;
     /* width: 200px; */
     height: 100px;
@@ -62,19 +62,19 @@
     flex-basis: 200px;
 }
 
-.item1 {
+.item1aaa {
     /* flex-grow: 1; */
     /* flex-shrink: 1; */
 
 }
 
-.item2 {
+.item2aaa {
     flex-grow: 2;
     /* flex-shrink: 2; */
 
 }
 
-.item3 {
+.item3aaa {
     /* flex-shrink: 5; */
 
 }
