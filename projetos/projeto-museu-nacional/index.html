@@ -8,39 +8,37 @@
     <link rel="stylesheet" href="estilo/style.css">
 </head>
 <body>
-    <main>
+    <div id="container">
         <header>
-            <div id="cabecalho">
-                <a href="#">
-                    <img src="imagens/logo.png" alt="Museu Nacional">
-                </a>
-                <nav>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Exposições</a></li>
-                        <li><a href="#">Pesquisa</a></li>
-                        <li><a href="#">Acervo</a></li>
-                        <li><a href="#">Vídeos</a></li>
-                        <li><a href="#">Fotos</a></li>
-                        <li><a href="#">Contato</a></li>
-                    </ul>
-                </nav>
-            </div>
+            <a href="#">
+                <img src="imagens/logo.png" alt="Museu Nacional">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Exposições</a></li>
+                    <li><a href="#">Pesquisa</a></li>
+                    <li><a href="#">Acervo</a></li>
+                    <li><a href="#">Vídeos</a></li>
+                    <li><a href="#">Fotos</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
         </header>
-        <article>
+        <main>
             <section id="principal"> <!--Inicio Section Principal-->
                 <div> <!--Imagem principal-->
                     <img src="imagens/museu.png" alt="Museu nacional: entrada principal">
                 </div> <!--Fim Imagem principal-->
-                <div class="conteudo"> <!--Vídeo introdução-->
+                <article class="conteudo"> <!--Vídeo introdução-->
                     <h2>Vídeo: conheça o museu</h2>
                     <iframe width="100%" height="190px" src="https://www.youtube.com/embed/RGUYb-hivrc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div> <!--Fim Vídeo introdução-->
-                <div class="conteudo"> <!--Mapa google-->
+                </article> <!--Fim Vídeo introdução-->
+                <article class="conteudo"> <!--Mapa google-->
                     <h2>Mapa: encontre o museu</h2>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.206311665319!2d-43.228717585034445!3d-22.90575998501238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997e58a085b7af%3A0x4d11e9a933d38ce3!2sMuseu%20Nacional%20-%20UFRJ!5e0!3m2!1spt-BR!2sbr!4v1676383445037!5m2!1spt-BR!2sbr" width="100%" height="190px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div> <!--Fim Mapa google-->
-                <div class="conteudo"> <!--Lista de conteúdo-->
+                </article> <!--Fim Mapa google-->
+                <article class="conteudo"> <!--Lista de conteúdo-->
                     <h2>Exposições</h2>
                     <ul>
                         <li>
@@ -79,14 +77,14 @@
                             </a>
                         </li>
                     </ul>
-                </div> <!--Fim Lista de conteúdo-->
-                <div class="conteudo"> <!--Resumo-->
+                </article> <!--Fim Lista de conteúdo-->
+                <article class="conteudo"> <!--Resumo-->
                     <h2>200 anos de história</h2>
                     <p>Numa ponta que avançava sobre o mar, posteriormente conhecida como Ponta do Calabouço, entre as praias de Piaçaba e Santa Luzia, no centro histórico do Rio de Janeiro, os portugueses construíram em 1603 a Fortaleza de Santiago, origem do conjunto arquitetônico que hoje abriga o Museu Histórico Nacional</p>
                     <a href="#" class="negrito">Leia mais</a>
-                </div> <!--Fim Resumo-->
+                </article> <!--Fim Resumo-->
             </section> <!--Fim Section Principal-->
-            <section id="navegacao-lateral"> <!--início Section Navegação Lateral-->
+            <aside id="navegacao-lateral"> <!--início aside Navegação Lateral-->
                 <img src="imagens/depoimento.png" alt="Museu Nacional criado em 1922, é um dos mais importantes museus do Brasil, reunindo um acervo de mais de 250.000 itens - Direção do Museu">
                 <div id="visita">
                     <h2>Faça uma visita</h2>
@@ -115,8 +113,8 @@
                         </div>
                     </div>
                 </div>
-            </section> <!--Fim Section Navegação Lateral-->
-        </article>
+            </aside> <!--Fim aside Navegação Lateral-->
+        </main>
         <footer>
             <nav>
                 <ul>
@@ -133,6 +131,6 @@
                 2019 <a href="#">Museu Nacional</a> - Todos os direitos reservados.
             </div>
         </footer>
-    </main>
+    </div>
 </body>
 </html>

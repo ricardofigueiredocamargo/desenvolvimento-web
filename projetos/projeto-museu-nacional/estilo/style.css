@@ -17,12 +17,12 @@
 }
 
 body {
-    background-color: var(--cor-fundo);
+    background: var(--cor-fundo) url(../imagens/fundo.png) top repeat-x;
     height: 100vh;
 }
 
 /*===== Configurações Gerais =====*/
-#cabecalho, article, footer {
+#container {
     width: 1080px;
     margin: auto;
 }
@@ -59,28 +59,24 @@ nav > ul > li > a {
 /*===== Header =====*/
 
 header {
-    background: var(--cor-verde-escuro) top no-repeat;
-    height: 150px;
-}
-
-#cabecalho {
     display: flex;
     justify-content: space-between;
-    padding-top: 20px;
+    padding: 20px 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-#cabecalho > nav > ul > li > a:hover {
+header > nav > ul > li > a:hover {
     background-color: var(--cor-laranja-escuro);
     color: var(--cor-verde-escuro);
 }
 
-/*===== Article =====*/
+/*===== Main =====*/
 
-article {
+main {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: -80px;
 }
 
 /*===== Principal =====*/
@@ -176,15 +172,15 @@ article {
 
 /*===== Rodapé =====*/
 footer {
+    background: url(../imagens/fundo-rodape.png) top center no-repeat;
     text-align: center;
     font-size: 0.9em;
     padding: 20px;
+    margin-top: 20px;
 }
 
 footer nav {
     width: 60%;
-    padding-top: 30px;
     margin: auto;
     margin-bottom: 15px;
-    border-top: 1px solid var(--cor-cinza-claro);
 }
