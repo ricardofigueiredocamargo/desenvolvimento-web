@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    width: 700px;
+    margin: auto;
+    border: 10px solid black;
+    border-radius: 5px;
+}
+
+.item {
+    background-color: rgb(248, 128, 128);
+    color: white;
+    padding: 5px;
+    font-size: 1.5em;
+    font-weight: bold;
+    border: 10px solid rgb(255, 80, 80);
+    border-radius: 5px;
+}
