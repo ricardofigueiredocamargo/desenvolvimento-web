@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+header.bg-warning {
+    overflow: hidden;
+}
+
+@media (max-width: 767.98px) {
+    header ul {
+        text-align: right;
+    }
+
+    .redes-sociais {
+        margin-top: 15px;
+    }
+}
+
+@media (min-width: 768px) {
+    .redes-sociais {
+        display: flex;
+        justify-content: end;
+    }
+}
