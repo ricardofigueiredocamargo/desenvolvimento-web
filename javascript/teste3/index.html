@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+
+    <style>
+        #inome {
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+<body>
+    <h1>Índice de massa corporal</h1>
+
+    <div id="pergunta-nome">
+        <h2>Qual é o seu nome?</h2>
+        <input type="text" name="nome" id="inome" placeholder="seu nome">
+    </div>
+
+    <div id="pergunta-altura">
+        <h2>Qual é a sua altura? (em centímetros)</h2>
+        <input type="number" name="altura" id="ialtura" placeholder="sua altura (cm)">
+    </div>
+
+    <div id="pergunta-peso">
+        <h2>Qual é o seu peso? (em kilogramas)</h2>
+        <input type="number" name="peso" id="ipeso" placeholder="seu peso (kg)">
+    </div>
+
+    <br>
+
+    <button onclick="calculoMassa()">
+        Registrar
+    </button>
+
+    <p id="resp"></p>
+    <script src="script/script.js"></script>
+</body>
+</html>
