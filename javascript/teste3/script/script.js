@@ -8,12 +8,19 @@ var massa = null
 var classificacao = null
 
 function calculoMassa() {
+    // nome 
     nome = document.querySelector('#inome').value
-    nomeCapitalize = nome.charAt(0).toUpperCase() + nome.slice(1)
+    nome = nome.split(' ')
+    for (let pos in nome) {
+        nome[pos] = nome[pos].charAt(0).toUpperCase() + nome[pos].slice(1)
+    }
+    nome = nome.join(' ')
 
+    // altura
     altura = document.querySelector('#ialtura').value
     altura = Number(altura)
 
+    // peso
     peso = document.querySelector('#ipeso').value
     peso = Number(peso)
 
@@ -41,6 +48,6 @@ function calculoMassa() {
             classificacao = 'Obesidade grau III'
         }
 
-        resp.innerHTML = `${nomeCapitalize} possui índice de massa corporal igual a ${massa.toFixed(2)}, sendo classificado como: ${classificacao}.`
+        resp.innerHTML = `${nome} possui índice de massa corporal igual a ${massa.toFixed(2)}, sendo classificado como: ${classificacao}.`
     }
 }

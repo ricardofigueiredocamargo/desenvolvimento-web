@@ -64,7 +64,7 @@ function finalizar() {
         let maiorFrase = `O maior valor informado foi ${maior}`       
         let menorFrase = `O menor valor informado foi ${menor}`
         let somaFrase = `Somando todos os valores, temos ${soma}`
-        let mediaFrase = `A média dos valores digitados é ${media}`
+        let mediaFrase = `A média dos valores digitados é ${media.toFixed(2)}`
 
         // adicionando frases ao HTML
         frases.push(totalFrase, maiorFrase, menorFrase, somaFrase, mediaFrase)
