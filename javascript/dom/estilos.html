@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM estilos</title>
+    <style>
+        #bloco {
+            background: grey; 
+            width: 150px; 
+            height: 150px; 
+            margin-top: 20px;
+        }
+
+        button {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Manipulando estilos:</h2>
+    <button onclick="mudarEstilo('red', '200px')">
+        Vermelho
+    </button>
+
+    <button onclick="mudarEstilo('green', '150px', '20px')">
+        Verde
+    </button>
+
+    <button onclick="mudarEstilo('blue', '100px', '200px')">
+        Azul
+    </button>
+
+    <div id="bloco">
+
+    </div>
+
+    <script src="script/script2.js"></script>
+</body>
+</html>
