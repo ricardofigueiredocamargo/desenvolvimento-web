@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: rgb(22, 136, 22);
+}
+
+/* GAME BOARD
+-------------------------------------*/
+#game-board {
+    background: linear-gradient(to bottom, #87CEEB, #E0F6FF);
+    width: 100%;
+    height: 500px;
+    border-bottom: 10px solid rgb(21, 160, 21);
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.nuvem {
+    position: absolute;
+    top: 10px;
+    width: 350px;
+    animation: nuvem 15s infinite linear;
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+
+    width: 50px;
+    height: 50px;
+    animation: pipe-animation 1500ms infinite linear;
+}
+
+.mario {
+    position: absolute;
+    bottom: 0px;
+    width: 80px;
+}
+
+.jump {
+    animation: jump 700ms ease-out;
+}
+
+/* GAME OVER
+-------------------------------------*/
+.game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-over img {
+    margin-bottom: -120px;
+}
+
+.game-over div {
+    margin-bottom: 10px;
+}
+
+.btn {
+    background-color: rgb(228, 72, 72);
+    color: white;
+
+    padding: 15px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    transition: transform 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+/*SCORE
+-------------------------------------*/
+#score {
+    background-color: rgba(255, 255, 255, 0.705);
+    width: 250px;
+    padding: 20px;
+    font-weight: bold;
+}
+
+/* ANIMAÇÕES
+-------------------------------------*/
+@keyframes nuvem {
+    from {
+        right: -350px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -50px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0%,
+    100% {
+        bottom: 0;
+    }
+
+    40%,
+    50%,
+    60% {
+        bottom: 100px;
+    }
+
+}

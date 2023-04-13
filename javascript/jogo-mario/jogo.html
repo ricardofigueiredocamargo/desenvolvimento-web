@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="estilo/style.css">
+
+    <script src="script/script.js" defer></script>
+
+    <title>Jogo Mario</title>
+</head>
+<body>
+    
+    <section id="game-board">
+
+        <div class="game-over">
+            <img src="imagens/game-over-titulo.png" alt="">
+            <div>
+                <button class="btn" onclick="window.location.reload()">
+                    Tentar Novamente
+                </button>
+            </div>
+            <div>
+                <button class="btn" onclick="window.location.href='index.html'">
+                    Voltar
+                </button>
+            </div>
+        </div>
+
+        <img src="imagens/nuvens.png" alt="" class="nuvem">
+        <img src="imagens/green-pipe.png" alt="pipe" class="pipe">
+        <img src="imagens/mario-gif.gif" alt="mario" class="mario">
+
+    </section>
+
+    <section id="score">
+        <div>
+            Pontuação: <span class="pontos"></span>
+        </div>
+        <div>
+            Tempo de partida: <span class="tempo"></span>s
+        </div>
+    </section>
+
+</body>
+</html>
