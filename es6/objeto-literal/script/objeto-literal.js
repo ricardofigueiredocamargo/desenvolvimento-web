@@ -9,4 +9,19 @@ class Produto {
     }
 }
 
-let produto = new Produto('Notebook')
+let produto = new Produto('Notebook', 2200)
+produto.verDescricao()
+
+// -----------------------------------------------------
+
+let produtoLiteral = {
+    descricao: 'Geladeira',
+    preco: 1800,
+    verDescricao: function() {
+        console.log(`${this.descricao} por apenas ${this.preco}`)
+    }
+}
+
+produtoLiteral.verDescricao()
+
+// -----------------------------------------------------

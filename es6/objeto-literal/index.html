@@ -5,10 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Objetos Literais</title>
+    <style>
+        form {
+            width: 300px;
+        }
+
+        div {
+            margin-bottom: 10px;
+        }
+
+        #resumo {
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
-    
+    <form action="">
+        <div>
+            <label for="inome">Nome: </label>
+            <input type="text" name="nome" id="inome">
+        </div>
 
-    <script src="script/objeto-literal.js"></script>
+        <div>
+            <label for="iidade">Idade: </label>
+            <input type="number" name="idade" id="iidade">
+        </div>
+
+        <div>
+            <label for="isexo">Sexo: </label>
+            <select name="sexo" id="isexo">
+                <option value="">--Selecione--</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Feminino">Feminino</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="iprofissao">Profissão: </label>
+            <input type="text" name="profissao" id="iprofissao">
+        </div>
+    </form>
+
+    <button onclick="avancar()">Avançar</button>
+
+    <div id="resumo"></div>
+    <script src="script/objeto-literal-melhoria-notacao.js"></script>
+    <script src="script/unico.js"></script>
 </body>
 </html>
