@@ -1,3 +1,4 @@
+// CLASSES ---------------------------------------------------
 class Despesa {
     constructor(ano, mes, dia, tipo, descricao, valor) {
         this.ano = ano
@@ -33,10 +34,73 @@ class Bd {
         localStorage.setItem(this.id, JSON.stringify(d))
         localStorage.setItem('id', this.id)
     }
+
+    recuperarTodosRegistros() {
+        for (let i = 1; i <= this.id; i++) {
+            let despesa = JSON.parse(localStorage.getItem(i))
+
+            if (despesa !== null) {
+                despesa.id = i
+                todasDespesas.push(despesa)
+            }
+        }
+    }
+
+    removerItem(id) {
+        localStorage.removeItem(id)
+    }
 }
 
+class Modal {
+    constructor() {
+        this.titulo = document.querySelector('#titulo-modal')
+        this.descricao = document.querySelector('#descricao-modal')
+        this.botao = document.querySelector('#btn-modal')
+    }
+
+    erroGravacao() {
+        this.titulo.classList.add('text-danger')
+        this.botao.classList.add('btn-danger')
+
+        this.titulo.innerHTML = `Erro na gravação`
+        this.descricao.innerHTML = `Existem campos obrigatórios que não foram preenchidos!`
+        this.botao.innerHTML = `Voltar e Corrigir`
+    }
+
+    sucessoGravacao() {
+        this.titulo.classList.add('text-success')
+        this.botao.classList.add('btn-success')
+        this.botao.addEventListener('click', limparDados)
+
+        this.titulo.innerHTML = `Registro inserido com sucesso`
+        this.descricao.innerHTML = `Despesa foi cadastrada com sucesso!`
+        this.botao.innerHTML = `Voltar`
+    }
+
+    removerClasses() {
+        if (this.titulo.classList.contains('text-danger')) {
+            this.titulo.classList.remove('text-danger')
+            this.botao.classList.remove('btn-danger')
+        }
+
+        if (this.titulo.classList.contains('text-success')) {
+            this.titulo.classList.remove('text-success')
+            this.botao.classList.remove('btn-success')
+            this.botao.removeEventListener('click', limparDados)
+        }
+    }
+}
+
+// VARIÁVEIS ---------------------------------------
 let bd = new Bd()
 
+let modal = new Modal()
+
+let todasDespesas = []
+
+let listaDespesas = document.querySelector('#listaDespesas')
+
+// FUNÇÕES PRINCIPAIS -----------------------------------------
 function cadastrarDespesa() {
     let ano = document.querySelector('#iano')
     let mes = document.querySelector('#imes')
@@ -54,14 +118,149 @@ function cadastrarDespesa() {
         valor.value
     )
 
+    modal.removerClasses()
+
     if (despesa.validarDados()) {
         bd.gravar(despesa)
-        $('#sucessoGravacao').modal('show')
+        modal.sucessoGravacao()
+        $('#modal').modal('show')
     } else {
-        $('#erroGravacao').modal('show')
+        modal.erroGravacao()
+        $('#modal').modal('show')
     }
-    
 }
 
+function mostrarListaDespesas() {
+    bd.recuperarTodosRegistros()
 
+    carregaListaDespesas(todasDespesas)
+}
+
+function pesquisarDespesa() {
+    let ano = document.querySelector('#iano').value
+    let mes = document.querySelector('#imes').value
+    let dia = document.querySelector('#idia').value
+    let tipo = document.querySelector('#itipo').value
+    let descricao = document.querySelector('#idesc').value
+    let valor = document.querySelector('#ivalor').value
+
+    listaDespesas.innerHTML = ''
+
+    let despesa = new Despesa(ano, mes, dia, tipo, descricao, valor)
+
+    let despesasFiltradas = pesquisar(despesa)
+
+    carregaListaDespesas(despesasFiltradas)
+}
+
+function carregaListaDespesas(lista) {
+    lista.forEach((d) => {
+        let diaAjustado = ajustarDiaDespesa(d.dia)
+        let mesAjustado = ajustarDiaDespesa(d.mes)
+        let tipoAjustado = ajustarTipoDespesa(d.tipo)
+        let valorAjustado = ajustarValorDespesa(d.valor)
+
+        let linha = listaDespesas.insertRow()
+        linha.insertCell(0).innerHTML = `${diaAjustado}/${mesAjustado}/${d.ano}`
+        linha.insertCell(1).innerHTML = tipoAjustado
+        linha.insertCell(2).innerHTML = d.descricao
+        linha.insertCell(3).innerHTML = valorAjustado
+
+        let btn = document.createElement('button')
+        btn.className = 'btn btn-danger btn-sm'
+        btn.innerHTML = `<i class="fas fa-times"></i>`
+        linha.insertCell(4).appendChild(btn)
+        btn.onclick = () => {
+            bd.removerItem(d.id)
+            window.location.reload()
+        }
+    })
+}
+
+// FUNÇÕES SECUNDÁRIAS -----------------------------------------
+function pesquisar(despesa) {
+    let despesasFiltradas = todasDespesas
+
+    //ano
+    if (despesa.ano !== '') {
+        despesasFiltradas = despesasFiltradas.filter(d => d.ano == despesa.ano)
+    }
+
+    //mes
+    if (despesa.mes !== '') {
+        despesasFiltradas = despesasFiltradas.filter(d => d.mes == despesa.mes)
+    }
+
+    //dia
+    if (despesa.dia !== '') {
+        despesasFiltradas = despesasFiltradas.filter(d => d.dia == despesa.dia)
+    }
+
+    //tipo
+    if (despesa.tipo !== '') {
+        despesasFiltradas = despesasFiltradas.filter(d => d.tipo == despesa.tipo)
+    }
+
+    //descricao
+    if (despesa.descricao !== '') {
+        despesasFiltradas = despesasFiltradas.filter(d => d.descricao == despesa.descricao)
+    }
+
+    //valor
+    if (despesa.valor !== '') {
+        despesasFiltradas = despesasFiltradas.filter(d => d.valor == despesa.valor)
+    }
+
+    return despesasFiltradas
+}
+
+let limparDados = () => {
+    document.querySelector('#iano').value = ''
+    document.querySelector('#imes').value = ''
+    document.querySelector('#idia').value = ''
+    document.querySelector('#itipo').value = ''
+    document.querySelector('#idesc').value = ''
+    document.querySelector('#ivalor').value = ''
+}
+
+function ajustarDiaDespesa(dia) {
+    if (dia < 10) {
+        dia = 0 + dia
+    }
+    return dia
+}
+
+function ajustarMesDespesa(mes) {
+    if (mes < 10) {
+        mes = 0 + mes
+    }
+    return mes
+}
+
+function ajustarTipoDespesa(tipo) {
+    switch (tipo) {
+        case '1':
+            tipo = 'Alimentação'
+            break
+        case '2':
+            tipo = 'Educação'
+            break
+        case '3':
+            tipo = 'Lazer'
+            break
+        case '4': 
+            tipo = 'Saúde'
+            break
+        case '5':
+            tipo = 'Transporte'
+            break                
+    }
+    return tipo
+}
+
+function ajustarValorDespesa(valor) {
+    valor = Number(valor)
+    valor = valor.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+    return valor
+}
 

@@ -16,7 +16,7 @@
 
     <title>App Orçamento Pessoal</title>
 </head>
-<body>
+<body onload="mostrarListaDespesas()">
     <!-- Header -->
     <header class="bg-primary">
         <div class="container">
@@ -118,7 +118,7 @@
 
                 <!-- Botão -->
                 <div class="col-md-2 text-right">
-                    <button class="btn btn-primary">
+                    <button class="btn btn-primary" onclick="pesquisarDespesa()">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </div>
@@ -137,6 +137,10 @@
                                 <th></th>
                             </tr>
                         </thead>
+
+                        <tbody id="listaDespesas">
+                            
+                        </tbody>
                     </table>
                 </div>
             </section>
