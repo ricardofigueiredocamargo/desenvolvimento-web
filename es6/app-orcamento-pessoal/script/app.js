@@ -219,8 +219,12 @@ function carregaValoresTotais() {
 function carregaValoresTotaisFiltrados() {
     let ano = document.querySelector('#iano').value
     let tipo = document.querySelector('#itipo').value
+    let mes = ''
+    let dia = ''
+    let descricao = ''
+    let valor = ''
 
-    if (ano == '' || tipo == '') {
+    if (ano == '' && tipo == '') {
         modal.removerClasses()
         modal.erroGravacao()
         $('#modal').modal('show')
@@ -236,9 +240,20 @@ function carregaValoresTotaisFiltrados() {
         })
 
         valorTotal = ajustarValorDespesa(valorTotal)
+        tipo = ajustarTipoDespesa(tipo)
 
-        if (ano == '') {
-            filtroSelecionado.innerHTML = `em ${}`
+        if (tipo == '') {
+            filtroSelecionado.innerHTML = `em ${ano}`
+        } else if (ano == '') {
+            filtroSelecionado.innerHTML = `em ${tipo}`
+        } else {
+            filtroSelecionado.innerHTML = `em ${tipo} em ${ano}`
+        }
+
+        valorFiltrado.innerHTML = `${valorTotal}`
+
+        if (valorTotalFiltrado.classList.contains('d-none')) {
+            valorTotalFiltrado.classList.remove('d-none')
         }
     }
 }
