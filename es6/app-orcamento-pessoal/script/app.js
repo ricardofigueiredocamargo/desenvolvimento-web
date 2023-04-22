@@ -77,6 +77,16 @@ class Modal {
         this.botao.innerHTML = `Voltar`
     }
 
+    removerDespesa() {
+        this.titulo.classList.add('text-warning')
+        this.botao.classList.add('btn-warning')
+        this.botao.addEventListener('click', recarregarPagina)
+
+        this.titulo.innerHTML = `Despesa removida`
+        this.descricao.innerHTML = `A sua despesa foi removida com sucesso!`
+        this.botao.innerHTML = `Voltar`
+    }
+
     removerClasses() {
         if (this.titulo.classList.contains('text-danger')) {
             this.titulo.classList.remove('text-danger')
@@ -87,6 +97,12 @@ class Modal {
             this.titulo.classList.remove('text-success')
             this.botao.classList.remove('btn-success')
             this.botao.removeEventListener('click', limparDados)
+        }
+
+        if (this.titulo.classList.contains('text-warning')) {
+            this.titulo.classList.remove('text-warning')
+            this.botao.classList.remove('btn-warning')
+            this.botao.removeEventListener('click', recarregarPagina)
         }
     }
 }
@@ -99,6 +115,14 @@ let modal = new Modal()
 let todasDespesas = []
 
 let listaDespesas = document.querySelector('#listaDespesas')
+
+let valoresTotais = document.querySelector('#valores-totais')
+
+let valorTotalFiltrado = document.querySelector('#valor-total-filtrado')
+
+let filtroSelecionado = document.querySelector('#filtro-selecionado')
+
+let valorFiltrado = document.querySelector('#valor-filtrado')
 
 // FUNÇÕES PRINCIPAIS -----------------------------------------
 function cadastrarDespesa() {
@@ -172,9 +196,51 @@ function carregaListaDespesas(lista) {
         linha.insertCell(4).appendChild(btn)
         btn.onclick = () => {
             bd.removerItem(d.id)
-            window.location.reload()
+            modal.removerDespesa()
+            $('#modal').modal('show')
         }
     })
+}
+
+function carregaValoresTotais() {
+    bd.recuperarTodosRegistros()
+
+    let valorTotal = 0
+
+    todasDespesas.forEach((d) => {
+        valorTotal += Number(d.valor)
+    })
+
+    valorTotal = ajustarValorDespesa(valorTotal)
+
+    valoresTotais.innerHTML = valorTotal
+}
+
+function carregaValoresTotaisFiltrados() {
+    let ano = document.querySelector('#iano').value
+    let tipo = document.querySelector('#itipo').value
+
+    if (ano == '' || tipo == '') {
+        modal.removerClasses()
+        modal.erroGravacao()
+        $('#modal').modal('show')
+    } else {
+        let despesa = new Despesa(ano, mes, dia, tipo, descricao, valor)
+
+        let despesasFiltradas = pesquisar(despesa)
+
+        let valorTotal = 0
+
+        despesasFiltradas.forEach((d) => {
+            valorTotal += Number(d.valor)
+        })
+
+        valorTotal = ajustarValorDespesa(valorTotal)
+
+        if (ano == '') {
+            filtroSelecionado.innerHTML = `em ${}`
+        }
+    }
 }
 
 // FUNÇÕES SECUNDÁRIAS -----------------------------------------
@@ -221,6 +287,11 @@ let limparDados = () => {
     document.querySelector('#itipo').value = ''
     document.querySelector('#idesc').value = ''
     document.querySelector('#ivalor').value = ''
+}
+
+let recarregarPagina = () => {
+    modal.removerClasses()
+    window.location.reload()
 }
 
 function ajustarDiaDespesa(dia) {

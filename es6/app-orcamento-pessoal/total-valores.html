@@ -14,9 +14,15 @@
     <!---->
     <script defer src="script/app.js"></script>
 
+    <style>
+        tbody tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+    </style>
+
     <title>App Orçamento Pessoal</title>
 </head>
-<body>
+<body onload="carregaValoresTotais()">
     <!-- Header -->
     <header class="bg-primary">
         <div class="container">
@@ -58,11 +64,11 @@
     <!-- Main -->
     <main>
         <div class="container">
-            <h1 class="display-4 mt-5 mb-5">Registro de nova despesa</h1>
+            <h1 class="display-4 mt-5 mb-5">Consulta de valores</h1>
 
             <section class="row mb-2">
                 <!-- Ano -->
-                <div class="col-md-2">
+                <div class="col-md-4">
                     <select name="ano" id="iano" class=" form-control">
                         <option value="">Ano</option>
                         <option value="2018">2018</option>
@@ -71,30 +77,6 @@
                         <option value="2021">2021</option>
                         <option value="2022">2022</option>
                     </select>
-                </div>
-
-                <!-- Mês -->
-                <div class="col-md-2">
-                    <select name="mes" id="imes" class=" form-control">
-                        <option value="">Mês</option>
-                        <option value="1">Janeiro</option>
-                        <option value="2">Fevereiro</option>
-                        <option value="3">Março</option>
-                        <option value="4">Abril</option>
-                        <option value="5">Maio</option>
-                        <option value="6">Junho</option>
-                        <option value="7">Julho</option>
-                        <option value="8">Agosto</option>
-                        <option value="9">Setembro</option>
-                        <option value="10">Outubro</option>
-                        <option value="11">Novembro</option>
-                        <option value="12">Dezembro</option>
-                    </select>
-                </div>
-
-                <!-- Dia -->
-                <div class="col-md-2">
-                    <input type="number" name="dia" id="idia" class=" form-control" placeholder="Dia">
                 </div>
 
                 <!-- Tipo -->
@@ -108,24 +90,26 @@
                         <option value="5">Transporte</option>
                     </select>
                 </div>  
-            </section>
-
-            <section class="row">
-                <!-- Descrição -->
-                <div class="col-md-8">
-                    <input type="text" name="desc" id="idesc" placeholder="Descrição" class="form-control">
-                </div>
-
-                <!-- Valor -->
-                <div class="col-md-2">
-                    <input type="number" name="valor" id="ivalor" placeholder="Valor" class="form-control">
-                </div>
 
                 <!-- Botão -->
                 <div class="col-md-2 text-right">
-                    <button class="btn btn-primary" onclick="cadastrarDespesa()">
-                        <i class="fa-solid fa-plus"></i>
+                    <button class="btn btn-primary" onclick="carregaValoresTotaisFiltrados()">
+                        <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
+                </div>
+            </section>
+
+            <!-- Valores Totais Filtrados -->
+            <section class="row mt-5 d-none" id="valor-total-filtrado">
+                <div class="col">  
+                    <h2>Valores totais gastos <span id="filtro-selecionado"></span>: <span id="valor-filtrado"></span></h2>
+                </div>
+            </section>
+
+            <!-- Valores Totais -->
+            <section class="row mt-5">
+                <div class="col">  
+                    <h2>Valores totais: <span id="valores-totais"></span></h2>
                 </div>
             </section>
         </div>
